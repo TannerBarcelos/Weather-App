@@ -27,7 +27,7 @@ export default class Canvas extends Component {
     // perform the request with the data received from search bar
     try {
       const res = await fetch (
-        `http://api.openweathermap.org/data/2.5/weather?q=${this.props.data}&appid=${'40bc193cc017bb3e03b54eaf63c7ca11'}`
+        `https://api.openweathermap.org/data/2.5/weather?q=${this.props.data}&appid=${'40bc193cc017bb3e03b54eaf63c7ca11'}`
       );
       const weather = await res.json ();
       this.setState ({
