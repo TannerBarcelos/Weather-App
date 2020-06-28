@@ -1,0 +1,10 @@
+.temperature-container {
+  width: 50%;
+  height: 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-top: 2rem;
+  padding: 30px;
+  color: #fff;
+  border-radius: 15px;
+}
