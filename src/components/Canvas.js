@@ -25,13 +25,17 @@ export default class Canvas extends Component {
   // make the network request here
   gatherData = async () => {
     // perform the request with the data received from search bar
-    const res = await fetch (
-      `http://api.openweathermap.org/data/2.5/weather?q=${this.props.data}&appid=${'40bc193cc017bb3e03b54eaf63c7ca11'}`
-    );
-    const weather = await res.json ();
-    this.setState ({
-      weather,
-    });
+    try {
+      const res = await fetch (
+        `http://api.openweathermap.org/data/2.5/weather?q=${this.props.data}&appid=${'40bc193cc017bb3e03b54eaf63c7ca11'}`
+      );
+      const weather = await res.json ();
+      this.setState ({
+        weather,
+      });
+    } catch (err) {
+      console.log (err);
+    }
   };
 
   /**
@@ -84,10 +88,11 @@ export default class Canvas extends Component {
           <p>{longitude}</p>
           <p>{latitude}</p>
         </div>
-        <h2>
+        <h2 className="gaugeTemp-container">
           {gauge} {fahrenheitTemperature}
         </h2>
         <h3>{time}</h3>
+
       </div>
     );
   };

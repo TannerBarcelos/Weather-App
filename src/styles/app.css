@@ -4,6 +4,10 @@ body {
   font-family: 'Comfortaa';
 }
 
+.container {
+  height: 60vh;
+}
+
 /* this is how you can grab an attribute inside an element: notice how i used for 
 and not htmlFor which is what react requires.. when it boils down, this all transpiles to es5 JS 
 and such, we need to use pure html attributes/elements and css3 selectors*/

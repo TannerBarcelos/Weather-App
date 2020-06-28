@@ -4,6 +4,8 @@ import React, {Component} from 'react';
 import SearchBar from './SearchBar';
 import Canvas from './Canvas';
 
+import '../styles/app.css';
+
 import env from 'dotenv';
 env.config ();
 
@@ -18,6 +20,9 @@ class App extends Component {
   };
 
   onSearchSuccess = searchQuery => {
+    if (searchQuery === '') {
+      alert ('Enter a valid city');
+    }
     this.setState ({
       searchQuery,
     });
