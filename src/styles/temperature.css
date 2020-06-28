@@ -1,10 +1,38 @@
 .temperature-container {
   width: 50%;
-  height: 50%;
+  height: 65%;
   background-size: cover;
   background-repeat: no-repeat;
-  margin-top: 2rem;
+  margin: 4rem auto;
   padding: 30px;
   color: #fff;
   border-radius: 15px;
+}
+/* 
+#spin {
+  font-size: 15px;
+  margin-top: 10px;
+  width: 120px;
+  height: 120px;
+}
+
+.spinner {
+  width: 50%;
+  height: 65%;
+  margin: 4rem auto;
+  text-align: center;
+} */
+
+/* media queries for responsive design */
+@media only screen and (max-width: 375px) {
+  .temperature-container {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .temperature-container {
+    width: 100%;
+    margin: 4rem 0;
+  }
 }

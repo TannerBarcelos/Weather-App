@@ -1,5 +1,7 @@
 import React, {Component, Fragment} from 'react';
 
+//import Spinner from 'react-bootstrap/Spinner';
+
 import moment from 'moment'; // for nice date/time formatting
 import '../styles/temperature.css';
 
@@ -30,7 +32,6 @@ export default class Canvas extends Component {
     this.setState ({
       weather,
     });
-    //console.log (this.state);
   };
 
   /**
@@ -51,6 +52,11 @@ export default class Canvas extends Component {
     let time;
     let gauge;
 
+    /**
+     * at first the query will take some time to return all the data, so, we will want to use an if check
+     * to determine if all the data has loaded to assign the variables to use in the render. Doing so will allow us to use
+     * a react modal that shows a spinning component until the search is back and then we can return the data
+     */
     if (
       weather !== undefined ||
       main !== undefined ||
@@ -63,12 +69,14 @@ export default class Canvas extends Component {
       gauge = <i className="fas fa-thermometer-half" />;
       fahrenheitTemperature = `${Math.floor (main.temp * 9 / 5 - 459.67)}`;
       time = this.getTimeOfDay ();
+    } else {
+      return null;
     }
 
     return (
       <div
-        style={{backgroundImage: `${this.determineBGImage ()}`}}
         className={'temperature-container'}
+        style={{backgroundImage: this.determineBGImage ()}}
       >
         <h1>{name}</h1>
         <h3>{descriptionOfWeather}</h3>

@@ -3,3 +3,49 @@
 body {
   font-family: 'Comfortaa';
 }
+
+/* this is how you can grab an attribute inside an element: notice how i used for 
+and not htmlFor which is what react requires.. when it boils down, this all transpiles to es5 JS 
+and such, we need to use pure html attributes/elements and css3 selectors*/
+label[for=city] {
+  font-size: 1.5rem;
+}
+
+.form-control {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-radius: 0;
+  color: #000;
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+.btn {
+  width: 30%;
+  background-color: dimgray;
+}
+
+/* media queries for responsive design */
+@media only screen and (max-width: 375px) {
+
+  .btn {
+    width: 100%;
+  }
+
+}
+
+
+@media only screen and (max-width: 768px) {
+  .btn {
+    width: 100%;
+  }
+
+}
+
+@media only screen and (max-width: 800px) {
+  .btn {
+    width: 100%;
+  }
+
+}
