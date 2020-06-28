@@ -30,22 +30,34 @@
 .gaugeTemp-container {
   position: absolute;
   color: #000;
-  right: 10%;
-  top: 31%;
+  right: 20%;
+  top: 10%;
   color: #fff;
   font-size: 80px;
 }
 
 /* media queries for responsive design */
-@media only screen and (max-width: 375px) {
+@media only screen and (max-width: 450px) {
   .temperature-container {
     width: 100%;
+    padding: 30px;
+    text-align: center;
+  }
+
+  .gaugeTemp-container {
+    top: 72%;
+    right: 29%;
   }
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (min-width: 760px) {
   .temperature-container {
     width: 100%;
     margin: 4rem 0;
+  }
+
+  .gaugeTemp-container {
+    top: 40%;
+    right: 15%;
   }
 }

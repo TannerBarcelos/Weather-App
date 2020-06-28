@@ -109,7 +109,7 @@ export default class Canvas extends Component {
     if (time >= 19 || time <= 5) {
       return 'url(https://images.unsplash.com/photo-1427501482951-3da9b725be23?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80)';
     } else if (time > 5 || time < 19) {
-      return 'url(https://images.unsplash.com/photo-1500534623283-312aade485b7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80)';
+      return 'url(https://images.unsplash.com/photo-1549849171-09f62448709e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2550&q=80)';
     }
   };
 
